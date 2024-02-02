@@ -6,33 +6,32 @@ import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.leetcode.problems.TestInputs.*;
 
 @RunWith(Parameterized.class)
-public class TopKFrequentElementsTest {
+public class LongestConsecutiveSequenceTest {
     private int[] nums;
-    private int k;
-    private int[] expected;
+    private int expected;
 
-    public TopKFrequentElementsTest(int[] nums, int k, int[] expected) {
+    public LongestConsecutiveSequenceTest(int[] nums, int expected) {
         this.nums = nums;
-        this.k = k;
         this.expected = expected;
     }
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{1, 1, 1, 2, 2, 3}, 2, new int[]{1,2}},
-                {new int[]{1}, 1, new int[]{1}},
+                {SEQUENCE_1, 4},
+                {SEQUENCE_2, 9},
+                // Add more test cases as needed
         });
     }
 
     @Test
-    public void name() {
-        TopKFrequentElements solution = new TopKFrequentElements();
-        assertArrayEquals(expected, solution.topKFrequent(nums,k));
+    public void test() {
+        LongestConsecutiveSequence solution = new LongestConsecutiveSequence();
+        assertEquals(expected, solution.longestConsecutive(nums));
     }
 }

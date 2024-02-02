@@ -6,33 +6,31 @@ import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(Parameterized.class)
-public class TopKFrequentElementsTest {
+public class ProductOfArrayExceptSelfTest {
+
     private int[] nums;
-    private int k;
     private int[] expected;
 
-    public TopKFrequentElementsTest(int[] nums, int k, int[] expected) {
+    public ProductOfArrayExceptSelfTest(int[] nums, int[] expected) {
         this.nums = nums;
-        this.k = k;
         this.expected = expected;
     }
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new int[]{1, 1, 1, 2, 2, 3}, 2, new int[]{1,2}},
-                {new int[]{1}, 1, new int[]{1}},
+                {new int[]{1,2,3,4}, new int[]{24,12,8,6}},
+                {new int[]{-1,1,0,-3,3}, new int[]{0,0,9,0,0}},
         });
     }
 
     @Test
     public void name() {
-        TopKFrequentElements solution = new TopKFrequentElements();
-        assertArrayEquals(expected, solution.topKFrequent(nums,k));
+        ProductOfArrayExceptSelf solution = new ProductOfArrayExceptSelf();
+        assertArrayEquals(expected, solution.productExceptSelf(nums));
     }
 }
