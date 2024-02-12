@@ -73,5 +73,11 @@ public class TestInputs {
 
     };
 
+    public static final Object[][] RPN = new Object[][]{
+            {new String[] {"2","1","+","3","*"}, 9},
+            {new String[] {"4","13","5","/","+"}, 6},
+            {new String[] {"10","6","9","3","+","-11","*","/","*","17","+","5","+"}, 22}
+    };
+
 
 }
