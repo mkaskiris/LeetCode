@@ -79,5 +79,25 @@ public class TestInputs {
             {new String[] {"10","6","9","3","+","-11","*","/","*","17","+","5","+"}, 22}
     };
 
+    public static final Object[][] GENERATE_PARENTHESIS = new Object[][]{
+            {3, List.of("((()))","(()())","(())()","()(())","()()()")},
+            {1, List.of("()")},
+    };
 
-}
+    public static final Object[][] DAILY_TEMPS = new Object[][]{
+            {new int[]{73,74,75,71,69,72,76,73}, new int[]{1,1,4,2,1,1,0,0}},
+            {new int[]{30,40,50,60}, new int[]{1,1,1,0}},
+            {new int[]{30,60,90}, new int[]{1,1,0}},
+    };
+
+    public static final Object[][] CAR_FLEET = new Object[][]{
+            {12, new int[]{10,8,0,5,3}, new int[]{2,4,1,1,3},3},
+            {10, new int[]{3}, new int[]{3},1},
+            {100, new int[]{0,2,4}, new int[]{4,2,1},1},
+            {10, new int[]{6,8}, new int[]{3,2},2},
+            {10, new int[]{0,4,2}, new int[]{2,1,3},1},
+            {10, new int[]{8,3,7,4,6,5}, new int[]{4,4,4,4,4,4},6},
+    };
+
+
+    }

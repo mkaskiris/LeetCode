@@ -1,22 +1,19 @@
-package org.leetcode.problems.Stack;
+package org.leetcode.problems.stack;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class ReversePolishNotation {
 
 
     public int evalRPN(String[] tokens) {
         List<String> operations = new ArrayList<>(Arrays.asList("+", "-", "*", "/"));
-        Stack<Integer> operants = new Stack<>();
+        Deque<Integer> operands = new ArrayDeque<>();
         for(String token: tokens){
             if(!operations.contains(token)){
-                operants.add(Integer.parseInt(token));
+                operands.push(Integer.parseInt(token));
             }else{
-                int a = operants.pop();
-                int b = operants.pop();
+                int a = operands.pop();
+                int b = operands.pop();
                 int res;
                 switch(token){
                     case "+" -> res = b + a;
@@ -24,9 +21,9 @@ public class ReversePolishNotation {
                     case "*" -> res = b * a;
                     default -> res = b / a;
                 }
-                operants.add(res);
+                operands.push(res);
             }
         }
-        return operants.get(0);
+        return operands.getFirst();
     }
 }

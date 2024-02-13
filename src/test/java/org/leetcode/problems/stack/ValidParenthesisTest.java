@@ -1,4 +1,4 @@
-package org.leetcode.problems.Stack;
+package org.leetcode.problems.stack;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

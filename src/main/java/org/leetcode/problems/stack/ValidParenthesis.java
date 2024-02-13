@@ -1,4 +1,4 @@
-package org.leetcode.problems.Stack;
+package org.leetcode.problems.stack;
 
 import java.util.*;
 
