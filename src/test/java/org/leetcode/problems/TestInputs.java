@@ -99,5 +99,24 @@ public class TestInputs {
             {10, new int[]{8,3,7,4,6,5}, new int[]{4,4,4,4,4,4},6},
     };
 
+    public static final Object[][] LARGEST_RECTANGLE = new Object[][]{
+            {new int[]{2,1,5,6,2,3}, 10},
+            {new int[]{2,4}, 4},
+            {new int[]{0,0}, 0},
+    };
+
+    public static final Object[][] BINARY_SEARCH = new Object[][]{
+            {new int[]{-1,0,3,5,9,12}, 9, 4},
+            {new int[]{-1,0,3,5,9,12}, 2, -1},
+            {new int[]{-1,0,3,5,9,12}, 12, 5},
+    };
+
+    public static final Object[][] TWO_D_MATRIX = new Object[][]{
+            {new int[][]{{1,3,5,7},{10,11,16,20},{23,30,34,60}}, 3, true},
+            {new int[][]{{1,3,5,7},{10,11,16,20},{23,30,34,60}}, 13, false},
+            {new int[][]{{1}}, 1, true},
+    };
+
+
 
     }
